@@ -146,16 +146,30 @@ nav a:hover:after{
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 10%;
+    gap: 20%;
 }
 .service .content .card{
     background-color: #7091F5;
-    border: 1px solid #ff0000;
+    border: 1px solid #AED2FF;
     padding: 0 7%;
     border-radius: 12px;
     width: 100%;
     text-align: center;
 }
+.service .content .card:hover{
+    border: 1px solid #0F2C59;
+}
+.service .content .card .card__details .name{
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+.service .content .card .card__details p{
+    font-size: 14px;
+    line-height: 150%;
+}
+
+
 .service .content .card img{
     width: 200px;
 }
