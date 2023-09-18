@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Osmanya&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/pixlbytes.png">
+    <title>PixlBytes.co</title>
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav>
+        <div class="logo">
+            <img src="assets/img/pixlbytes.png" alt="">
+            <h1>PixlBytes.co</h1>
+        </div>
+        <section class="main-nav">
+            <a href="#home" id="scrollToTop">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#service">Services</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">Contact Us</a>
+        </section>
+        
+    </nav>
+
+    <!-- home start -->
+    <section class="hero" id="home">
+        <div class="content">
+            <h1 id="home">Welcome to PixlBytes</h1>
+            <p>Kami adalah sebuah perusahaan yang berdedikasi untuk memberikan solusi terbaik <br> dalam bidang Web Development. Dengan personil yang ahli dalam tiap bidangnya,<br> kami menghasilkan berbagai website dengan kualitas yang terbaik.</p>
+            
+            <p>
+                Bersama-sama, kami dapat menghasilkan hasil yang luar biasa dan membantu Anda mencapai kesuksesan dalam dunia digital yang terus berkembang!
+            </p>
+            <br>
+            <a href=""><button>Order Websitemu!</button></a>
+        </div>
+        <img src="assets/img/build_web.svg" alt="">
+    </section>
+
+    <!-- about start -->
+    <section class="about" id="about">
+        <div class="content">
+            <h1>About Us</h1>
+            <div class="container">
+                <img src="/assets/img/company.jpg" alt="">
+                <div class="about-text">
+                    <p>Di PixlBytes, kami mendedikasikan diri untuk memberikan pengalaman yang luar biasa kepada pelanggan kami. Dengan komitmen mendalam terhadap kualitas, inovasi, dan pelayanan pelanggan, kami telah menjadi salah satu pemimpin dalam industri ini. Sejak 2023, perjalanan kami telah diwarnai oleh prestasi, keberhasilan, dan kepuasan pelanggan. Kami mengutamakan integritas dan transparansi dalam setiap interaksi kami, memastikan bahwa setiap pelanggan merasa dihargai dan didengarkan.</p><br>
+
+                    <p>Kami percaya bahwa inovasi adalah kunci untuk terus berkembang. Oleh karena itu, kami berusaha untuk selalu berada di garis depan teknologi dan tren industri. Namun, apa yang benar-benar membedakan kami adalah dedikasi kami untuk memahami kebutuhan unik Anda. Kami tahu bahwa setiap pelanggan memiliki tantangan dan tujuan yang berbeda, dan kami berkomitmen untuk memberikan solusi yang disesuaikan secara individual.</p><br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service start -->
+    <section class="service" id="service">
+
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Ketika tautan navbar diklik
+        $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+            $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+            }, 500); // Waktu animasi dalam milidetik (1000ms = 1 detik)
+            }
+        });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fungsi untuk melakukan auto-scroll ke atas
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth" // Menggunakan efek scroll halus (smooth scroll)
+                });
+            }
+
+            // Menghubungkan tautan "Home" dengan fungsi scroll
+            const homeLink = document.querySelector('a[href="#home"]');
+            homeLink.addEventListener("click", function (event) {
+                event.preventDefault(); // Menghentikan tindakan bawaan tautan
+                scrollToTop(); // Memanggil fungsi untuk scroll ke atas
+            });
+        });
+    </script>
+</body>
+</html>
